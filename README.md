@@ -108,3 +108,75 @@ If you wish to see it at your terminal, type:
 ```
 cat revocation.crt
 ```
+
+---
+
+### Exporting GnuPG public key
+
+Imagine that you want to share your public key, so people can reach you under an encrypted comunication
+
+To do that you can export your public key and share it with whoever you want
+
+```
+gpg --export --armor <KEY-ID> > <any-name-you-want>.txt
+```
+
+Now check out your exported public key
+
+```
+cat <public-key-name>.txt
+```
+
+---
+
+### Exporting GnuPG Private Key
+
+If you want to export your private key the process is pretty much the same
+
+```
+gpg --export-secret-keys --armor <KEY-ID> > <any-name-you-want>.txt
+```
+
+_PS: NEVER SHARE YOUR PRIVATE KEY WITH ANYONE, because this is the key that decripts all the comunication that comes in. Make sure to keep it safe!_
+
+---
+
+### Simetric Encrypting GPG Private Key
+
+You can also encrypt your private key running the command:
+
+```
+gpg --symetric <your-private-key>.txt
+```
+
+The output generated will be _<your-private-key.txt.gpg>_.
+
+You'll need to provide a password for protecting the file. This same password will be asked when needed in future decryption attempts.
+
+_PS: Make sure to keep this key safe!_
+
+---
+
+### Decrypting GnuPG Private Key with Simetric Encrypted Private Key
+
+Now you have the private key encrypted and wants to decrypt the _.gpg_ key, and for that you can run:
+
+```
+gpg --output <any-name-you-want-for-the-output>.txt -d <your-encrypted-gpg-private-key-file>.gpg
+```
+
+You can check the output:
+
+```
+cat <decrypted-private-key>.txt
+```
+
+---
+
+
+
+
+
+
+
+
