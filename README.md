@@ -1,3 +1,6 @@
+<img src="https://github.com/user-attachments/assets/f1b4c729-c224-4ce8-b758-0e553cd80694" height="200" />
+
+
 # Generating GnuPG keys at Linux
 
 > A GPG (GNU Privacy Guard) is a tool used for IT Professionals with the goal of enhanced authentication and cryptography. It's used for security, privacy and integrity of comunications and file verification.
